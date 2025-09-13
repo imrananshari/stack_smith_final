@@ -74,3 +74,162 @@ Example:
   <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm sm:text-base md:text-lg">
     Click Me
   </button>
+
+
+
+   <!-- Services Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-[7%]">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">We deliver comprehensive digital solutions tailored to your business needs</p>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1: Brand Design -->
+                <div class="group relative bg-white border border-gray-200 rounded-xl overflow-hidden h-80 hover:bg-[#172D44] transition-all duration-300 cursor-pointer">
+                    <!-- Default State -->
+                    <div class="group-hover:opacity-0 transition-opacity duration-300 h-full flex flex-col">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900">Brand Design</h3>
+                        </div>
+                        <div class="flex-1 flex items-end  justify-end ">
+                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=200&h=150&fit=crop&crop=center" alt="Brand Design" class="w-72 h-  object-cover rounded-lg transform rotate-12   shadow-lg"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover State -->
+                    <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Brand Design</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">Create compelling brand identities that resonate with your audience and build lasting recognition through strategic visual design.</p>
+                        </div>
+                        <button class="bg-[#E04D2B] text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-[#d63f1f] transition-colors duration-200 self-start">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Web Development -->
+                <div class="group relative bg-white border border-gray-200 rounded-xl overflow-hidden h-80 hover:bg-[#172D44] transition-all duration-300 cursor-pointer">
+                    <!-- Default State -->
+                    <div class="group-hover:opacity-0 transition-opacity duration-300 h-full flex flex-col">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900">Web Development</h3>
+                        </div>
+                        <div class="flex-1 flex items-end justify-end p-4">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=150&fit=crop&crop=center" alt="Web Development" class="w-32 h-24 object-cover rounded-lg transform rotate-12 shadow-lg"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover State -->
+                    <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Web Development</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">Build responsive, high-performance websites that deliver exceptional user experiences with modern technologies.</p>
+                        </div>
+                        <button class="bg-[#E04D2B] text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-[#d63f1f] transition-colors duration-200 self-start">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Mobile Apps -->
+                <div class="group relative bg-white border border-gray-200 rounded-xl overflow-hidden h-80 hover:bg-[#172D44] transition-all duration-300 cursor-pointer">
+                    <!-- Default State -->
+                    <div class="group-hover:opacity-0 transition-opacity duration-300 h-full flex flex-col">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900">Mobile Apps</h3>
+                        </div>
+                        <div class="flex-1 flex items-end justify-end p-4">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=200&h=150&fit=crop&crop=center" alt="Mobile Apps" class="w-32 h-24 object-cover rounded-lg transform rotate-12 shadow-lg"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover State -->
+                    <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Mobile Apps</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">Develop native and cross-platform mobile applications for iOS and Android with seamless user experience.</p>
+                        </div>
+                        <button class="bg-[#E04D2B] text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-[#d63f1f] transition-colors duration-200 self-start">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 4: AI Automation -->
+                <div class="group relative bg-white border border-gray-200 rounded-xl overflow-hidden h-80 hover:bg-[#172D44] transition-all duration-300 cursor-pointer">
+                    <!-- Default State -->
+                    <div class="group-hover:opacity-0 transition-opacity duration-300 h-full flex flex-col">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900">AI Automation</h3>
+                        </div>
+                        <div class="flex-1 flex items-end justify-end p-4">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=150&fit=crop&crop=center" alt="AI Automation" class="w-32 h-24 object-cover rounded-lg transform rotate-12 shadow-lg"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover State -->
+                    <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-4">AI Automation</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">Streamline operations with intelligent automation solutions that reduce costs and improve efficiency across your business.</p>
+                        </div>
+                        <button class="bg-[#E04D2B] text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-[#d63f1f] transition-colors duration-200 self-start">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 5: Enterprise Apps -->
+                <div class="group relative bg-white border border-gray-200 rounded-xl overflow-hidden h-80 hover:bg-[#172D44] transition-all duration-300 cursor-pointer">
+                    <!-- Default State -->
+                    <div class="group-hover:opacity-0 transition-opacity duration-300 h-full flex flex-col">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900">Enterprise Apps</h3>
+                        </div>
+                        <div class="flex-1 flex items-end justify-end p-4">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&h=150&fit=crop&crop=center" alt="Enterprise Apps" class="w-32 h-24 object-cover rounded-lg transform rotate-12 shadow-lg"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover State -->
+                    <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Enterprise Apps</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">Build scalable enterprise applications that integrate seamlessly with your existing systems and workflows.</p>
+                        </div>
+                        <button class="bg-[#E04D2B] text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-[#d63f1f] transition-colors duration-200 self-start">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service Card 6: Data Analytics -->
+                <div class="group relative bg-white border border-gray-200 rounded-xl overflow-hidden h-80 hover:bg-[#172D44] transition-all duration-300 cursor-pointer">
+                    <!-- Default State -->
+                    <div class="group-hover:opacity-0 transition-opacity duration-300 h-full flex flex-col">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900">Data Analytics</h3>
+                        </div>
+                        <div class="flex-1 flex items-end justify-end p-4">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=200&h=150&fit=crop&crop=center" alt="Data Analytics" class="w-32 h-24 object-cover rounded-lg transform -rotate-12 shadow-lg"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover State -->
+                    <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-4">Data Analytics</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">Transform raw data into actionable insights with advanced analytics and machine learning capabilities.</p>
+                        </div>
+                        <button class="bg-[#E04D2B] text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-[#d63f1f] transition-colors duration-200 self-start">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
