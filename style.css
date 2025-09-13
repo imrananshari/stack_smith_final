@@ -1,0 +1,285 @@
+/* Apply Manrope font family to all elements */
+html, body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Set different weights for different elements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700; /* Bold for headings */
+}
+
+p {
+    font-weight: 400; /* Regular for paragraph text */
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+/* Custom styles */
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Smooth transitions */
+#navbar {
+    transition: all 0.4s ease;
+    width: 100%;
+}
+
+/* Compact navbar styling when scrolling */
+.navbar-compact {
+    width: 86% !important; /* 10% margin on each side */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 10px !important;
+    border-radius: 8px !important;
+}
+
+.rounded-navbar {
+    border-radius: 8px;
+}
+
+/* Navigation link hover effect with flip animation */
+.nav-link {
+    position: relative;
+    padding-bottom: 2px;
+    perspective: 1000px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.nav-link span {
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    transform-origin: 50% 100%;
+    position: relative;
+    backface-visibility: hidden;
+}
+
+.nav-link:hover span {
+    transform: rotateX(360deg);
+    color: #E04D2B;
+}
+
+/* Underline effect */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #E04D2B;
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Services dropdown styling */
+#services-dropdown {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform-origin: top center;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    border: 1px solid rgb(208, 224, 255);
+    
+    /* Position dropdown slightly to the right */
+    width: 90vw;
+    max-width: 1180px; /* max-7xl equivalent */
+    left: 50%;
+    transform: translateX(-30%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Ensure dropdown stays positioned on hover */
+.group:hover #services-dropdown {
+    transform: translateX(-35%) translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#services-dropdown a.flex:hover {
+    color: #E04D2B;
+}
+
+#services-dropdown a:hover svg {
+    transform: translateX(3px);
+    transition: transform 0.2s ease;
+    color: #E04D2B;
+}
+
+/* Service item hover animations */
+#services-dropdown .bg-gray-50 {
+    transition: all 0.2s ease;
+}
+
+#services-dropdown .bg-gray-50:hover {
+    transform: translateX(3px);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Hero Section Styles */
+.hero-heading {
+    animation: fadeInUp 1s ease-out;
+    line-height: 1.20 !important;
+}
+
+.hero-text {
+    animation: fadeInUp 1s ease-out 0.2s;
+    animation-fill-mode: both;
+}
+
+.hero-cta {
+    animation: fadeInUp 1s ease-out 0.4s;
+    animation-fill-mode: both;
+}
+
+.hero-stats {
+    animation: fadeInUp 1s ease-out 0.6s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee {
+    animation-play-state: paused;
+}
+
+/* CTA Button Hover Effect */
+.cta-primary:hover {
+    box-shadow: 0 4px 12px rgba(224, 77, 43, 0.25);
+    transform: translateY(-2px);
+    background-color: #E04D2B;
+}
+
+.cta-secondary:hover {
+    box-shadow: 0 4px 12px rgba(224, 77, 43, 0.15);
+    transform: translateY(-2px);
+    background-color: #E04D2B;
+    border-color: #E04D2B;
+    color: white;
+}
+
+/* Mobile menu adjustments */
+@media (max-width: 768px) {
+    .mobile-menu-open {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Disable compact navbar functionality on mobile */
+    .navbar-compact {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 0 !important;
+        border-radius: 0 !important;
+    }
+}
+
+/* Responsive dropdown adjustments */
+@media (max-width: 1200px) {
+    #services-dropdown {
+        width: 90vw;
+        max-width: 90vw;
+        transform: translateX(-42%);
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    
+    .group:hover #services-dropdown {
+        transform: translateX(-42%) translateY(0) scale(1);
+    }
+    
+    #services-dropdown .grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    #services-dropdown .grid-cols-4 > div:nth-child(3),
+    #services-dropdown .grid-cols-4 > div:nth-child(4) {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #services-dropdown {
+        width: 95vw;
+        max-width: 95vw;
+        transform: translateX(-47%);
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    
+    .group:hover #services-dropdown {
+        transform: translateX(-47%) translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 480px) {
+    #services-dropdown {
+        width: 98vw;
+        max-width: 98vw;
+        transform: translateX(-49%);
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    
+    .group:hover #services-dropdown {
+        transform: translateX(-49%) translateY(0) scale(1);
+    }
+}

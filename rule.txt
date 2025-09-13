@@ -1,0 +1,76 @@
+# TailwindCSS Design Rules for Responsive UI
+
+1. GENERAL USAGE
+- Always use Tailwind classes directly inside HTML tags (not in CSS file).
+- Maintain a clean, consistent design using spacing, alignment, and responsive utilities.
+
+2. RESPONSIVE BREAKPOINTS (Mobile-first approach)
+- Use responsive prefixes:
+  - sm: (640px and up, small devices)
+  - md: (768px and up, tablets)
+  - lg: (1024px and up, laptops)
+  - xl: (1280px and up, desktops)
+  - 2xl: (1536px and up, large desktops)
+- Default styles = for mobile first. Add larger breakpoints as needed.
+
+Example:
+<div class="text-base sm:text-lg md:text-xl lg:text-2xl">
+  Responsive text
+</div>
+
+3. SPACING (Margin, Padding, Gap)
+- Use consistent scale: 1, 2, 4, 6, 8, 10, 12, 16, 20, 24...
+- margin (m, mx, my, mt, mb, ml, mr)
+- padding (p, px, py, pt, pb, pl, pr)
+- gap (gap-x, gap-y, gap)
+
+Example:
+<div class="p-4 md:p-6 lg:p-8 gap-4">
+  ...
+</div>
+
+4. ALIGNMENT
+- Flexbox and Grid alignment:
+  - Flexbox: flex, items-center, justify-center, justify-between, justify-around, justify-evenly
+  - Grid: grid, place-items-center, place-content-between
+- Text alignment: text-left, text-center, text-right
+
+Example:
+<div class="flex items-center justify-between">
+  ...
+</div>
+
+5. UNIFORMITY & CONSISTENCY
+- Use the same color palette across UI.
+- Keep consistent spacing between sections (e.g., section padding = py-12).
+- Use consistent border-radius (rounded-lg or rounded-xl).
+- Maintain same font sizes and weight hierarchy:
+  - Headings: text-3xl / text-4xl font-bold
+  - Subheadings: text-xl font-semibold
+  - Body: text-base leading-relaxed
+
+6. RESPONSIVE LAYOUT RULES
+- Mobile: single column (stacked)
+- Tablet: 2 columns when possible
+- Desktop: multi-column layout
+- Use grid or flex for responsiveness.
+
+Example:
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  ...
+</div>
+
+7. ACCESSIBILITY
+- Ensure text contrast is readable (e.g., text-white on bg-gray-900).
+- Use hover/focus states for interactive elements (hover:bg-blue-600 focus:ring-2).
+
+8. EXAMPLES
+- Responsive container:
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    ...
+  </div>
+
+- Responsive button:
+  <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm sm:text-base md:text-lg">
+    Click Me
+  </button>
