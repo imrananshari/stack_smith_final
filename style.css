@@ -98,6 +98,76 @@ p {
     width: 100%;
 }
 
+/* Service title hover effects */
+.service-title .word {
+    transition: color 0.1s ease !important;
+    display: inline-block;
+}
+
+/* Ensure fast color transitions for service titles */
+.service-item .service-title {
+    transition: transform 0.8s ease;
+}
+
+/* Override any conflicting transitions */
+.service-item:hover .service-title .word {
+    transition: color 1.5s ease !important;
+}
+
+/* Service hover image animations */
+.service-item .service-hover-image {
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    right: 120px;
+}
+
+.service-item:hover .service-hover-image {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Quick fade out when leaving hover */
+.service-item .service-hover-image {
+    transition-delay: 0s;
+}
+
+.service-item:hover .service-hover-image {
+    transition-delay: 0.1s;
+}
+
+/* Service card background on hover */
+.service-item .flex.flex-col {
+    transition: background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease, height 0.3s ease-in-out, margin-bottom 0.3s ease;
+}
+
+.service-item:hover .flex.flex-col {
+background-color: #eeeff6;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    height: 10rem;
+    margin-top: 0.5rem;
+}
+
+/* Increase height for cards with multi-line titles */
+.service-item:has(h3 br):hover .flex.flex-col {
+    height: 12rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Delayed orange color animation for h3 titles */
+.service-item .service-title {
+    transition: color 0.9s ease-in-out;
+    transition-delay: 1s;
+}
+
+.service-item:hover .service-title {
+    color: #E04D2B;
+    transition-delay: 1.5s;
+}
+
 /* Services dropdown styling */
 #services-dropdown {
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -282,4 +352,47 @@ p {
     .group:hover #services-dropdown {
         transform: translateX(-49%) translateY(0) scale(1);
     }
+}
+
+/* Animated Word Styles */
+.animated-word {
+    position: relative;
+    display: inline-block;
+    min-width: 200px;
+    text-align: left;
+}
+
+.word-fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: #D1D5DB;
+}
+
+.word-fade.fade-in {
+    opacity: 1;
+}
+
+.char-animate {
+    transition: color 0.3s ease-in-out;
+    color: #D1D5DB;
+}
+
+.char-animate.highlight {
+    color: #E04D2B;
+}
+
+/* SVG Icon Animation */
+@keyframes pulse-icon {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.animate-pulse-icon {
+    animation: pulse-icon 2s ease-in-out infinite;
 }

@@ -25,7 +25,7 @@
     <div class="w-full fixed top-0 left-0 flex justify-center z-50">
         <header id="navbar" class="bg-white z-50 transition-all duration-300">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between py-4">
+                <div class="flex items-center justify-between py-2">
                     <!-- Logo -->
                     <div class="flex items-center">
                         <div class="w-10 h-10 overflow-hidden rounded">
@@ -57,7 +57,12 @@
                     
                     <!-- CTA Button -->
                     <div>
-                        <button class="bg-[#E04D2B] text-white px-7 py-2.5 rounded-[8px] font-medium hover:bg-opacity-90 transition-colors">LET'S TALK</button>
+                        <button class="bg-[#E04D2B] text-white px-7 py-2.5 rounded-3xl font-medium hover:bg-opacity-90 transition-colors flex items-center gap-2">
+                            LET'S TALK
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 animate-pulse-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                        </button>
                     </div>
                     
                     <!-- Mobile Menu Button -->
@@ -91,7 +96,7 @@
                 <!-- Left Column - Main Heading and CTA (55% of 80% width) -->
                 <div class="w-full md:w-[68%] mb-10 md:mb-0">
                     <h1 class="hero-heading text-4xl md:text-5xl lg:text-[4rem] font-bold text-[#172D44] line-height-[1.20] mb-12 mt-8  max-w-3xl">
-                        Your AI partner in enterprise apps and automation that deliver <span class="text-[#E04D2B]">results.</span>
+                        Your AI partner in <span class="text-[#E04D2B] animated-word" id="animatedWord">enterprise</span> apps and automation that deliver results.
                     </h1>
                     <div class="hero-cta flex flex-wrap gap-4 mt-16">
                         <a href="#" class="cta-primary bg-[#172D44] text-white px-8 py-4 rounded-lg font-medium hover:bg-[#E04D2B] transition-all flex items-center">
@@ -105,85 +110,116 @@
                         </a>
                     </div>
                     
-
-                </div>
-                
-                <!-- Right Column - Description and Reviews (25% of 80% width) -->
-                <div class="w-full md:w-[35%] md:flex md:flex-col md:justify-between"> <!-- Changed to justify-between -->
-                    <div class="md:mt-28"> <!-- Added significant top margin to push content down -->
-                        <p class="hero-text text-xl text-[#172D44] mb-10 leading-relaxed max-w-md tracking-normal">
-                            We deliver globally UI, UX & web design smoothly, without delay, saving your time and money with an efficient process.
-                        </p>
-                    </div>
-                    
-                    <!-- Reviews Section - now positioned to align with bottom of CTA buttons -->
-                    <div class="hero-stats">
-                        <div class="flex items-center justify-between">
-                            <!-- Reviews in single line -->
-                            <div class="flex items-center">
-                                <!-- Profile Images -->
-                                <div class="flex -space-x-2 mr-2">
-                                    <div class="w-9 h-9 rounded-full border-2 border-white overflow-hidden bg-gray-200 shadow-sm">
-                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Founder" class="w-full h-full object-cover" />
-                                    </div>
-                                    <div class="w-9 h-9 rounded-full border-2 border-white overflow-hidden bg-gray-200 shadow-sm">
-                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Founder" class="w-full h-full object-cover" />
-                                    </div>
-                                    <div class="w-9 h-9 rounded-full border-2 border-white overflow-hidden bg-gray-200 shadow-sm">
-                                        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Founder" class="w-full h-full object-cover" />
-                                    </div>
+                    <!-- Horizontal Reviews and Compliance Section -->
+                    <div class="mt-12 flex flex-wrap items-center gap-6 lg:gap-8">
+                        <!-- Clutch Reviews Section -->
+                        <div class="flex items-center">
+                            <!-- Profile Images -->
+                            <div class="flex -space-x-2 mr-3">
+                                <div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-gray-200 shadow-sm">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Founder" class="w-full h-full object-cover" />
                                 </div>
-                                <div class="mr-3">
-                                    <p class="font-medium text-xs">Loved by 500+</p>
-                                    <p class="text-gray-600 text-xs">Founders</p>
-    </div>
+                                <div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-gray-200 shadow-sm">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Founder" class="w-full h-full object-cover" />
+                                </div>
+                                <div class="w-8 h-8 rounded-full border-2 border-white overflow-hidden bg-gray-200 shadow-sm">
+                                    <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Founder" class="w-full h-full object-cover" />
+                                </div>
+                            </div>
+                            <div class="mr-4">
+                                <p class="font-medium text-xs text-[#172D44]">Loved by 500+</p>
+                                <p class="text-gray-600 text-xs">Founders</p>
+                            </div>
                             
-                                <!-- Clutch Rating (now in same line) -->
-                                <div class="flex items-center ml-1">
-                                    <div class="w-7 h-7 overflow-hidden">
-                                        <img src="asset/clutch.jpg" alt="Clutch" class="w-full h-full object-contain">
+                            <!-- Clutch Rating -->
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 overflow-hidden mr-2">
+                                    <img src="asset/clutch.jpg" alt="Clutch" class="w-full h-full object-contain">
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="flex">
+                                        <svg viewBox="0 0 24 24" fill="#E04D2B" class="w-4 h-4">
+                                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                                        </svg>
+                                        <svg viewBox="0 0 24 24" fill="#E04D2B" class="w-4 h-4">
+                                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                                        </svg>
+                                        <svg viewBox="0 0 24 24" fill="#E04D2B" class="w-4 h-4">
+                                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                                        </svg>
+                                        <svg viewBox="0 0 24 24" fill="#E04D2B" class="w-4 h-4">
+                                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                                        </svg>
+                                        <!-- Half star for 4.5 rating -->
+                                        <svg viewBox="0 0 24 24" class="w-4 h-4">
+                                            <defs>
+                                                <linearGradient id="halfStar">
+                                                    <stop offset="50%" stop-color="#E04D2B"/>
+                                                    <stop offset="50%" stop-color="#E5E7EB"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <path fill="url(#halfStar)" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
+                                        </svg>
                                     </div>
-                                    <div class="flex items-center ml-1">
-                                        <div class="flex">
-                                            <svg viewBox="0 0 24 24" fill="#E04D2B" class="w-5 h-5">
-                                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-                                            </svg>
-                                            <svg viewBox="0 0 24 24" fill="#E04D2B" class="w-5 h-5">
-                                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-                                            </svg>
-                                            <svg viewBox="0 0 24 24" fill="#E04D2B" class="w-5 h-5">
-                                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-                                            </svg>
-                                            <svg viewBox="0 0 24 24" fill="#E04D2B" class="w-5 h-5">
-                                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-                                            </svg>
-                                            <svg viewBox="0 0 24 24" fill="#E04D2B" class="w-5 h-5">
-                                                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-                                            </svg>
-                                        </div>
-                                        <div class="font-medium text-xs ml-1">13 REVIEWS</div>
-                                    </div>
+                                    <div class="font-medium text-xs ml-1 text-[#172D44]">4.5 out of 5</div>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Compliance Information -->
-                        <div class="compliance-info mt-12 space-y-3">
-                            <div class="flex items-center text-lg text-gray-600">
-                                <img src="asset/gdpr.png" alt="GDPR" class="w-7 h-7 mr-2" />
-                                <span><strong>GDPR</strong> – Your data rights protected.</span>
+                        <!-- Partition -->
+                        <div class="w-px h-8 bg-gray-300"></div>
+                        
+                        <!-- GDPR Icon with Hover -->
+                        <div class="group relative">
+                            <div class="cursor-pointer">
+                                <img src="asset/gdpr.png" alt="GDPR" class="w-8 h-8 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6" />
                             </div>
-                            <div class="flex items-center text-lg text-gray-600">
-                                <svg class="w-7 h-7 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                </svg>
-                                <span><strong>HIPAA</strong> – Healthcare-ready data security.</span>
-                            </div>
-                            <div class="flex items-center text-lg text-gray-600">
-                                <img src="asset/nda.png" alt="NDA" class="w-7 h-7 mr-2" />
-                                <span><strong>NDA-First Engagement</strong> – Confidentiality guaranteed from day one.</span>
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-[#172D44] text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap z-10 group-hover:translate-y-1">
+                                <div class="font-semibold">GDPR</div>
+                                <div>Your data rights protected</div>
                             </div>
                         </div>
+                        
+                        <!-- Partition -->
+                        <div class="w-px h-8 bg-gray-300"></div>
+                        
+                        <!-- HIPAA Icon with Hover -->
+                        <div class="group relative">
+                            <div class="cursor-pointer">
+                                <svg class="w-8 h-8 text-blue-600 transition-all duration-300 group-hover:scale-110 group-hover:-rotate-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-[#172D44] text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap z-10 group-hover:translate-y-1">
+                                <div class="font-semibold">HIPAA</div>
+                                <div>Healthcare-ready data security</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Partition -->
+                        <div class="w-px h-8 bg-gray-300"></div>
+                        
+                        <!-- NDA Icon with Hover -->
+                        <div class="group relative">
+                            <div class="cursor-pointer">
+                                <img src="asset/nda.png" alt="NDA" class="w-8 h-8 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />
+                            </div>
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-[#172D44] text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap z-10 group-hover:translate-y-1">
+                                <div class="font-semibold">NDA-First Engagement</div>
+                                <div>Confidentiality guaranteed from day one</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <!-- Right Column - Description (25% of 80% width) -->
+                <div class="w-full md:w-[35%] md:flex md:flex-col md:justify-start">
+                    <div class="md:mt-28">
+                        <p class="hero-text text-xl text-[#172D44] mb-10 leading-relaxed max-w-md tracking-normal">
+                            Practical AI and enterprise applications designed for your industry.
+Simple to adopt, built to last, focused on results.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -362,7 +398,196 @@
         </div>
     </section>
  
-  
+     <!-- Services Section -->
+    <section class="bg-white py-20">
+        <div class="container mx-auto px-[7%]">
+            <!-- Section Header -->
+            <div class="mb-16">
+                <p class="text-[#4A90E2] text-sm font-medium mb-4 tracking-wide uppercase">Our Service</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-[#172D44] leading-tight">
+                    We Collect your idea<br>
+                    and Visualize It
+                </h2>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="space-y-8">
+                <!-- Service Item 1: AI & Machine Learning Lab -->
+                <div class="service-item group relative border-b border-gray-200 -pb-16  hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-48 hover:h-48 overflow-visible">
+                    <!-- Hover Image - Positioned Above Card -->
+                    <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10">
+                        <div class="bg-white w-64 h-54 shadow-lg rounded overflow-hidden" >
+                            <img src="asset/stacksmit.jpg" alt="AI & Machine Learning" >
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1" data-text="AI & Machine Learning Lab">
+                                    <span class="word">AI</span> <span class="word">&</span> <span class="word">Machine</span> <span class="word">Learning</span> <span class="word">Lab</span>
+                                </h3>
+                            </div>
+                            <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B]  transition-all duration-300">
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="service-description text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-4">
+                            Transform data into predictions, insights, and intelligent actions that drive business growth.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Item 2: Enterprise Applications & Intelligent Automation -->
+                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-58 hover:h-58 overflow-visible">
+                    <!-- Hover Image - Positioned Above Card -->
+                    <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10">
+                        <div class="bg-white w-64 h-54 shadow-lg rounded overflow-hidden" >
+                            <img src="asset/stacksmit.jpg" alt="Enterprise Applications">
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1 leading-tight" data-text="Enterprise Applications & Intelligent Automation">
+                                    <span class="word">Enterprise</span> <span class="word">Applications</span> <span class="word">&</span><br>
+                                    <span class="word">Intelligent</span> <span class="word">Automation</span>
+                                </h3>
+                            </div>
+                            <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="service-description text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
+                            Streamline workflows and eliminate repetitive tasks with intelligent automation at scale.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Item 3: App Modernisation & Cloud Transformation -->
+                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-58 hover:h-58 overflow-visible">
+                    <!-- Hover Image - Positioned Above Card -->
+                    <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10">
+                        <div class="bg-white w-64 h-54 shadow-lg rounded overflow-hidden">
+                            <img src="asset/stacksmit.jpg" alt="App Modernisation" >
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1 leading-tight" data-text="App Modernisation & Cloud Transformation">
+                                    <span class="word">App</span> <span class="word">Modernisation</span> <span class="word">&</span><br>
+                                    <span class="word">Cloud</span> <span class="word">Transformation</span>
+                                </h3>
+                            </div>
+                            <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="service-description text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
+                            Modernise legacy applications and migrate securely to cloud platforms for agility and resilience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Item 4: ESG-Focused Digital Solutions -->
+                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-48 hover:h-48 overflow-visible">
+                    <!-- Hover Image - Positioned Above Card -->
+                    <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10">
+                        <div class="bg-white w-64 h-54 shadow-lg rounded overflow-hidden" >
+                            <img src="asset/stacksmit.jpg" alt="ESG Solutions" >
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1" data-text="ESG-Focused Digital Solutions">
+                                    <span class="word">ESG-Focused</span> <span class="word">Digital</span> <span class="word">Solutions</span>
+                                </h3>
+                            </div>
+                            <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="service-description text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
+                            Digitise ESG reporting and compliance to track progress, prove impact, and meet global standards.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Item 5: Mobile Applications Development -->
+                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-48 hover:h-48 overflow-visible">
+                    <!-- Hover Image - Positioned Above Card -->
+                    <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10">
+                        <div class="bg-white w-64 h-54 shadow-lg rounded overflow-hidden">
+                            <img src="asset/stacksmit.jpg" alt="Mobile Development" >
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1" data-text="Mobile Applications Development">
+                                    <span class="word">Mobile</span> <span class="word">Applications</span> <span class="word">Development</span>
+                                </h3>
+                            </div>
+                            <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="service-description text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
+                            Design mobile-first experiences that strengthen customer engagement and empower employees on the move.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Item 6: Support, Optimization & Lifecycle Management -->
+                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-58 hover:h-58 overflow-visible">
+                    <!-- Hover Image - Positioned Above Card -->
+                    <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10">
+                        <div class="bg-white w-64 h-54 shadow-lg rounded overflow-hidden">
+                            <img src="asset/stacksmit.jpg" alt="Support & Optimization">
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1 leading-tight" data-text="Support, Optimization & Lifecycle Management">
+                                    <span class="word">Support,</span> <span class="word">Optimization</span> <span class="word">&</span><br>
+                                    <span class="word">Lifecycle</span> <span class="word">Management</span>
+                                </h3>
+                            </div>
+                            <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                       
+                       <p class="service-description text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
+                            Maximise performance and reliability with continuous monitoring, optimisation, and lifecycle management.
+                        </p>
+                         </div>
+                    </div>
+                </div>
+      
+            </div>
+        </div>
+    </section>
 
  
            <!-- Content Sections (for scrolling) -->
@@ -380,6 +605,10 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script></section>
+
+  
+
+ 
 
     <script src="script.js"></script>
 </body>

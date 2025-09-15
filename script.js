@@ -42,4 +42,103 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add scroll event listener
     window.addEventListener('scroll', updateNavbar);
+    
+    // Animated word functionality
+    const words = ['enterprise', 'development', 'powerful', 'innovative', 'scalable'];
+    const animatedWordElement = document.getElementById('animatedWord');
+    
+    if (animatedWordElement) {
+        let currentWordIndex = 0;
+        
+        function animateWord() {
+            const currentWord = words[currentWordIndex];
+            
+            // Create spans for each character
+            const charSpans = currentWord.split('').map(char => 
+                `<span class="char-animate">${char}</span>`
+            ).join('');
+            
+            // Set word with fade class and character spans
+            animatedWordElement.innerHTML = charSpans;
+            animatedWordElement.className = 'text-[#E04D2B] animated-word word-fade';
+            
+            // Fade in the whole word in gray
+            setTimeout(() => {
+                animatedWordElement.classList.add('fade-in');
+            }, 100);
+            
+            // Animate each character to orange one by one
+            setTimeout(() => {
+                const charElements = animatedWordElement.querySelectorAll('.char-animate');
+                charElements.forEach((char, index) => {
+                    setTimeout(() => {
+                        char.classList.add('highlight');
+                    }, index * 150); // 150ms delay between each character
+                });
+            }, 1000);
+            
+            // Fade out and move to next word
+            setTimeout(() => {
+                animatedWordElement.classList.remove('fade-in');
+                
+                setTimeout(() => {
+                    currentWordIndex = (currentWordIndex + 1) % words.length;
+                    animateWord();
+                }, 500);
+            }, 1000 + (currentWord.length * 150) + 1500); // Wait for character animation + display time
+        }
+        
+        // Start animation after page load
+        setTimeout(animateWord, 1000);
+    }
+    
+    // Services section word-by-word animation
+    const serviceItems = document.querySelectorAll('.service-item');
+    let activeTimeouts = []; // Store active timeouts
+    
+    // Function to clear all active timeouts and reset all titles
+    function resetAllTitles() {
+        // Clear all pending timeouts
+        activeTimeouts.forEach(timeout => clearTimeout(timeout));
+        activeTimeouts = [];
+        
+        // Reset all service titles to gray immediately
+        serviceItems.forEach(serviceItem => {
+            const title = serviceItem.querySelector('.service-title');
+            const words = title.querySelectorAll('.word');
+            words.forEach(word => {
+                word.style.color = '#9CA3AF'; // gray-400
+            });
+        });
+    }
+    
+    serviceItems.forEach(item => {
+        const title = item.querySelector('.service-title');
+        const words = title.querySelectorAll('.word');
+        
+        // Reset all words to gray initially
+        words.forEach(word => {
+            word.style.color = '#9CA3AF'; // gray-400
+            word.style.transition = 'color 0.1s ease'; // Faster transition for instant reset
+        });
+        
+        // Add hover event listeners
+        item.addEventListener('mouseenter', () => {
+            // First, reset all titles and clear timeouts
+            resetAllTitles();
+            
+            // Then animate current title words to orange one by one
+            words.forEach((word, index) => {
+                const timeout = setTimeout(() => {
+                    word.style.color = '#E04D2B'; // orange color
+                }, index * 100); // Reduced delay for faster animation
+                activeTimeouts.push(timeout);
+            });
+        });
+        
+        item.addEventListener('mouseleave', () => {
+            // Clear timeouts and reset colors immediately
+            resetAllTitles();
+        });
+    });
 });
