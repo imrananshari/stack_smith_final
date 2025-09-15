@@ -23,15 +23,15 @@
 <body class="min-h-screen">
     <!-- Navbar -->
     <div class="w-full fixed top-0 left-0 flex justify-center z-50">
-        <header id="navbar" class="bg-white mt-5 p-2 z-50 transition-all duration-300">
-            <div class="container mx-auto px-2 sm:px-6 lg:px-8 xl:px-[7%] 2xl:px-[7%]">
-                <div class="flex items-center justify-between py-1">
+        <header id="navbar" class="bg-white z-50 transition-all duration-300">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between py-2">
                     <!-- Logo -->
                     <div class="flex items-center">
-                        <div class="w-14 h-14 overflow-hidden rounded">
+                        <div class="w-10 h-10 overflow-hidden rounded">
                             <img src="asset/stacksmit.jpg" alt="Stack Smith Logo" class="w-full h-full object-cover">
                         </div>
-                        <span class="ml-2 text-[#172D44] text-xl font-bold whitespace-nowrap">Stack Smith</span>
+                        <span class="ml-2 text-[#172D44] text-xl font-bold">Stack Smith</span>
                     </div>
                     
                     <!-- Navigation Links -->
@@ -57,9 +57,9 @@
                     
                     <!-- CTA Button -->
                     <div>
-                        <button class="bg-[#E04D2B] text-white px-6 py-2 rounded-3xl font-medium hover:bg-opacity-90 transition-colors flex items-center gap-2">
-                            <span>LET'S TALK</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 animate-pulse-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <button class="bg-[#E04D2B] text-white px-7 py-2.5 rounded-3xl font-medium hover:bg-opacity-90 transition-colors flex items-center gap-2">
+                            LET'S TALK
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 animate-pulse-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                             </svg>
                         </button>
@@ -67,8 +67,8 @@
                     
                     <!-- Mobile Menu Button -->
                     <div class="md:hidden">
-                        <button type="button" id="mobile-menu-button" class="text-[#172D44] p-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                        <button type="button" id="mobile-menu-button" class="text-[#172D44]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
                         </button>
@@ -91,7 +91,7 @@
     </div>
     <!-- Hero Section -->
     <section class="bg-white pt-36 pb-28">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-[7%] 2xl:px-[7%]">
+        <div class="container mx-auto px-[7%]">
             <div class="flex flex-col md:flex-row items-center md:items-start justify-between">
                 <!-- Left Column - Main Heading and CTA (55% of 80% width) -->
                 <div class="w-full md:w-[68%] mb-12  md:mb-0">
@@ -240,7 +240,7 @@ Simple to adopt, built to last, focused on results.
 
     <!-- Trusted Companies Section -->
     <section class="bg-white py-1">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-[7%] 2xl:px-[7%]">
+        <div class="container mx-auto px-[7%]">
             <div class="text-center mb-10">
                 <h3 class="text-2xl font-bold text-gray-600 mb-6">Trusted by 500+ global companies</h3>
                 
@@ -412,7 +412,7 @@ Simple to adopt, built to last, focused on results.
  
      <!-- Services Section -->
     <section class="bg-white py-20">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-[7%] 2xl:px-[7%]">
+        <div class="container mx-auto px-[7%]">
             <!-- Section Header -->
             <div class="mb-16">
                 <p class="text-[#4A90E2] text-sm font-medium mb-4 tracking-wide uppercase">Our Service</p>
@@ -425,60 +425,35 @@ Simple to adopt, built to last, focused on results.
             <!-- Services Grid -->
             <div class="space-y-8">
                 <!-- Service Item 1: AI & Machine Learning Lab -->
-                <div class="service-item group relative border-b border-gray-200 pb-8 transition-all duration-500 cursor-pointer overflow-visible">
-                    <!-- Desktop Hover Image - Positioned Above Card -->
+                <div class="service-item group relative border-b border-gray-200 -pb-16  hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-48 hover:h-48 overflow-visible">
+                    <!-- Hover Image - Positioned Above Card -->
                     <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10 hidden md:block">
-                        <div class="bg-white w-64 h-54  shadow-lg rounded overflow-hidden">
-                            <img src="asset/stacksmit.jpg" alt="AI & Machine Learning">
+                        <div class="bg-white w-48 md:w-64 h-40 md:h-54 shadow-lg rounded overflow-hidden" >
+                            <img src="asset/stacksmit.jpg" alt="AI & Machine Learning" >
                         </div>
                     </div>
                     
                     <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
-                        <!-- Desktop Layout -->
-                        <div class="hidden md:flex items-center justify-between mb-4">
+                        <div class="flex items-center justify-between">
                             <div class="flex-1 pr-4">
-                                <h3 class="text-4xl lg:text-5xl font-bold text-[#172D44] mb-3 transition-all duration-500 service-title group-hover:translate-x-1 leading-tight" data-text="AI & Machine Learning Lab">
+                                <h3 class="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1" data-text="AI & Machine Learning Lab">
                                     <span class="word">AI</span> <span class="word">&</span> <span class="word">Machine</span> <span class="word">Learning</span> <span class="word">Lab</span>
                                 </h3>
                             </div>
-                            <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300 flex-shrink-0">
-                                <svg class="w-6 h-6 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="arrow-icon w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B]  transition-all duration-300 flex-shrink-0">
+                                <svg class="w-5 h-5 md:w-6 md:h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                             </div>
                         </div>
-                        
-                        <!-- Mobile Layout - Row 1: Title + Arrow -->
-                        <div class="mobile-title-row md:hidden">
-                            <h3 class="service-title text-[#172D44]" data-text="AI & Machine Learning Lab">
-                                AI & Machine Learning Lab
-                            </h3>
-                            <div class="arrow-icon rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
-                                <svg class="w-4 h-4 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        
-                        <!-- Mobile Layout - Row 2: Description + Image -->
-                        <div class="mobile-content-row md:hidden">
-                            <div class="mobile-description">
-                                <p>Transform data into predictions, insights, and intelligent actions that drive business growth.</p>
-                            </div>
-                            <div class="mobile-image">
-                                <img src="asset/stacksmit.jpg" alt="AI & Machine Learning">
-                            </div>
-                        </div>
-                        
-                        <!-- Desktop Description -->
-                        <p class="service-description hidden md:block text-gray-600 text-base md:text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-4">
+                        <p class="service-description text-gray-600 text-base md:text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-4">
                             Transform data into predictions, insights, and intelligent actions that drive business growth.
                         </p>
                     </div>
                 </div>
 
                 <!-- Service Item 2: Enterprise Applications & Intelligent Automation -->
-                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer overflow-visible">
+                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-58 hover:h-58 overflow-visible">
                     <!-- Hover Image - Positioned Above Card -->
                     <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10 hidden md:block">
                         <div class="bg-white w-64 h-54 shadow-lg rounded overflow-hidden" >
@@ -487,259 +462,135 @@ Simple to adopt, built to last, focused on results.
                     </div>
                     
                     <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
-                        <!-- Desktop Layout -->
-                        <div class="hidden md:flex items-center justify-between">
+                        <div class="flex items-center justify-between">
                             <div class="flex-1">
-                                <h3 class="text-4xl lg:text-5xl font-bold text-[#172D44] mb-3 transition-all duration-500 service-title group-hover:translate-x-1 leading-tight" data-text="Enterprise Applications & Intelligent Automation">
+                                <h3 class="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1 leading-tight" data-text="Enterprise Applications & Intelligent Automation">
                                     <span class="word">Enterprise</span> <span class="word">Applications</span> <span class="word">&</span><br>
                                     <span class="word">Intelligent</span> <span class="word">Automation</span>
                                 </h3>
                             </div>
                             <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
-                                <svg class="w-6 h-6 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                             </div>
                         </div>
-                        
-                        <!-- Mobile Layout - Row 1: Title + Arrow -->
-                        <div class="mobile-title-row md:hidden">
-                            <h3 class="service-title text-[#172D44]" data-text="Enterprise Applications & Intelligent Automation">
-                                Enterprise Applications & Intelligent Automation
-                            </h3>
-                            <div class="arrow-icon rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
-                                <svg class="w-4 h-4 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        
-                        <!-- Mobile Layout - Row 2: Description + Image -->
-                        <div class="mobile-content-row md:hidden">
-                            <div class="mobile-description">
-                                <p>Streamline workflows and eliminate repetitive tasks with intelligent automation at scale.</p>
-                            </div>
-                            <div class="mobile-image">
-                                <img src="asset/stacksmit.jpg" alt="Enterprise Applications">
-                            </div>
-                        </div>
-                        
-                        <!-- Desktop Description -->
-                        <p class="service-description hidden md:block text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
+                        <p class="service-description text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
                             Streamline workflows and eliminate repetitive tasks with intelligent automation at scale.
                         </p>
                     </div>
                 </div>
 
                 <!-- Service Item 3: App Modernisation & Cloud Transformation -->
-                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer overflow-visible">
+                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-58 hover:h-58 overflow-visible">
                     <!-- Hover Image - Positioned Above Card -->
                     <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10 hidden md:block">
-                        <div class="bg-white w-64 h-54  shadow-lg rounded overflow-hidden">
+                        <div class="bg-white w-48 md:w-64 h-40 md:h-54 shadow-lg rounded overflow-hidden">
                             <img src="asset/stacksmit.jpg" alt="App Modernisation" >
                         </div>
                     </div>
                     
                     <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
-                        <!-- Desktop Layout -->
-                        <div class="hidden md:flex items-center justify-between">
+                        <div class="flex items-center justify-between">
                             <div class="flex-1">
-                                <h3 class="text-4xl lg:text-5xl font-bold text-[#172D44] mb-3 transition-all duration-500 service-title group-hover:translate-x-1 leading-tight" data-text="App Modernisation & Cloud Transformation">
+                                <h3 class="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1 leading-tight" data-text="App Modernisation & Cloud Transformation">
                                     <span class="word">App</span> <span class="word">Modernisation</span> <span class="word">&</span><br>
                                     <span class="word">Cloud</span> <span class="word">Transformation</span>
                                 </h3>
                             </div>
                             <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
-                                <svg class="w-6 h-6 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                             </div>
                         </div>
-                        
-                        <!-- Mobile Layout - Row 1: Title + Arrow -->
-                        <div class="mobile-title-row md:hidden">
-                            <h3 class="service-title text-[#172D44]" data-text="App Modernisation & Cloud Transformation">
-                                App Modernisation & Cloud Transformation
-                            </h3>
-                            <div class="arrow-icon rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
-                                <svg class="w-4 h-4 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        
-                        <!-- Mobile Layout - Row 2: Description + Image -->
-                        <div class="mobile-content-row md:hidden">
-                            <div class="mobile-description">
-                                <p>Modernise legacy applications and migrate securely to cloud platforms for agility and resilience.</p>
-                            </div>
-                            <div class="mobile-image">
-                                <img src="asset/stacksmit.jpg" alt="App Modernisation">
-                            </div>
-                        </div>
-                        
-                        <!-- Desktop Description -->
-                        <p class="service-description hidden md:block text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
+                        <p class="service-description text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
                             Modernise legacy applications and migrate securely to cloud platforms for agility and resilience.
                         </p>
                     </div>
                 </div>
 
                 <!-- Service Item 4: ESG-Focused Digital Solutions -->
-                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer overflow-visible">
+                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-48 hover:h-48 overflow-visible">
                     <!-- Hover Image - Positioned Above Card -->
                     <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10 hidden md:block">
-                        <div class="bg-white w-64 h-54  shadow-lg rounded overflow-hidden" >
+                        <div class="bg-white w-48 md:w-64 h-40 md:h-54 shadow-lg rounded overflow-hidden" >
                             <img src="asset/stacksmit.jpg" alt="ESG Solutions" >
                         </div>
                     </div>
                     
                     <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
-                        <!-- Desktop Layout -->
-                        <div class="hidden md:flex items-center justify-between">
+                        <div class="flex items-center justify-between">
                             <div class="flex-1">
-                                <h3 class="text-4xl lg:text-5xl font-bold text-[#172D44] mb-3 transition-all duration-500 service-title group-hover:translate-x-1" data-text="ESG-Focused Digital Solutions">
+                                <h3 class="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1" data-text="ESG-Focused Digital Solutions">
                                     <span class="word">ESG-Focused</span> <span class="word">Digital</span> <span class="word">Solutions</span>
                                 </h3>
                             </div>
                             <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
-                                <svg class="w-6 h-6 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                             </div>
                         </div>
-                        
-                        <!-- Mobile Layout - Row 1: Title + Arrow -->
-                        <div class="mobile-title-row md:hidden">
-                            <h3 class="service-title text-[#172D44]" data-text="ESG-Focused Digital Solutions">
-                                ESG-Focused Digital Solutions
-                            </h3>
-                            <div class="arrow-icon rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
-                                <svg class="w-4 h-4 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        
-                        <!-- Mobile Layout - Row 2: Description + Image -->
-                        <div class="mobile-content-row md:hidden">
-                            <div class="mobile-description">
-                                <p>Digitise ESG reporting and compliance to track progress, prove impact, and meet global standards.</p>
-                            </div>
-                            <div class="mobile-image">
-                                <img src="asset/stacksmit.jpg" alt="ESG Solutions">
-                            </div>
-                        </div>
-                        
-                        <!-- Desktop Description -->
-                        <p class="service-description hidden md:block text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
+                        <p class="service-description text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
                             Digitise ESG reporting and compliance to track progress, prove impact, and meet global standards.
                         </p>
                     </div>
                 </div>
 
                 <!-- Service Item 5: Mobile Applications Development -->
-                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer overflow-visible">
+                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-48 hover:h-48 overflow-visible">
                     <!-- Hover Image - Positioned Above Card -->
                     <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10 hidden md:block">
-                        <div class="bg-white w-64 h-54  shadow-lg rounded overflow-hidden">
+                        <div class="bg-white w-48 md:w-64 h-40 md:h-54 shadow-lg rounded overflow-hidden">
                             <img src="asset/stacksmit.jpg" alt="Mobile Development" >
                         </div>
                     </div>
                     
                     <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
-                        <!-- Desktop Layout -->
-                        <div class="hidden md:flex items-center justify-between">
+                        <div class="flex items-center justify-between">
                             <div class="flex-1">
-                                <h3 class="text-4xl lg:text-5xl font-bold text-[#172D44] mb-3 transition-all duration-500 service-title group-hover:translate-x-1" data-text="Mobile Applications Development">
+                                <h3 class="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1" data-text="Mobile Applications Development">
                                     <span class="word">Mobile</span> <span class="word">Applications</span> <span class="word">Development</span>
                                 </h3>
                             </div>
                             <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
-                                <svg class="w-6 h-6 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                 </svg>
                             </div>
                         </div>
-                        
-                        <!-- Mobile Layout - Row 1: Title + Arrow -->
-                        <div class="mobile-title-row md:hidden">
-                            <h3 class="service-title text-[#172D44]" data-text="Mobile Applications Development">
-                                Mobile Applications Development
-                            </h3>
-                            <div class="arrow-icon rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
-                                <svg class="w-4 h-4 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        
-                        <!-- Mobile Layout - Row 2: Description + Image -->
-                        <div class="mobile-content-row md:hidden">
-                            <div class="mobile-description">
-                                <p>Design mobile-first experiences that strengthen customer engagement and empower employees on the move.</p>
-                            </div>
-                            <div class="mobile-image">
-                                <img src="asset/stacksmit.jpg" alt="Mobile Development">
-                            </div>
-                        </div>
-                        
-                        <!-- Desktop Description -->
-                        <p class="service-description hidden md:block text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
+                        <p class="service-description text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
                             Design mobile-first experiences that strengthen customer engagement and empower employees on the move.
                         </p>
                     </div>
                 </div>
 
                 <!-- Service Item 6: Support, Optimization & Lifecycle Management -->
-                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer overflow-visible">
+                <div class="service-item group relative border-b border-gray-200 pb-8 hover:border-[#E04D2B] transition-all duration-500 cursor-pointer h-58 hover:h-58 overflow-visible">
                     <!-- Hover Image - Positioned Above Card -->
                     <div class="service-hover-image absolute -top-8 right-1 transform -translate-x-1/2 z-10 hidden md:block">
-                        <div class="bg-white w-64 h-54  shadow-lg rounded overflow-hidden">
+                        <div class="bg-white w-48 md:w-64 h-40 md:h-54 shadow-lg rounded overflow-hidden">
                             <img src="asset/stacksmit.jpg" alt="Support & Optimization">
                         </div>
                     </div>
                     
                     <div class="flex flex-col h-full transition-all duration-500 group-hover:scale-95 group-hover:translate-y-2 justify-center">
-                        <!-- Desktop Layout -->
-                        <div class="hidden md:flex items-center justify-between">
+                        <div class="flex items-center justify-between">
                             <div class="flex-1">
-                                <h3 class="text-4xl lg:text-5xl font-bold text-[#172D44] mb-3 transition-all duration-500 service-title group-hover:translate-x-1 leading-tight" data-text="Support, Optimization & Lifecycle Management">
+                                <h3 class="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-400 mb-3 transition-all duration-500 service-title group-hover:translate-x-1 leading-tight" data-text="Support, Optimization & Lifecycle Management">
                                     <span class="word">Support,</span> <span class="word">Optimization</span> <span class="word">&</span><br>
                                     <span class="word">Lifecycle</span> <span class="word">Management</span>
                                 </h3>
                             </div>
                             <div class="arrow-icon w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
-                                <svg class="w-6 h-6 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-all duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                     </svg>
                                 </div>
                             </div>
-                        
-                        <!-- Mobile Layout - Row 1: Title + Arrow -->
-                        <div class="mobile-title-row md:hidden">
-                            <h3 class="service-title text-[#172D44]" data-text="Support, Optimization & Lifecycle Management">
-                                Support, Optimization & Lifecycle Management
-                            </h3>
-                            <div class="arrow-icon rounded-full border-2 border-gray-300 flex items-center justify-center group-hover:border-[#E04D2B] group-hover:bg-[#E04D2B] transition-all duration-300">
-                                <svg class="w-4 h-4 text-[#172D44] group-hover:text-white transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                    </svg>
-                            </div>
-                        </div>
-                        
-                        <!-- Mobile Layout - Row 2: Description + Image -->
-                        <div class="mobile-content-row md:hidden">
-                            <div class="mobile-description">
-                                <p>Maximise performance and reliability with continuous monitoring, optimisation, and lifecycle management.</p>
-                            </div>
-                            <div class="mobile-image">
-                                <img src="asset/stacksmit.jpg" alt="Support & Optimization">
-                            </div>
-                        </div>
-                        
-                        <!-- Desktop Description -->
-                        <p class="service-description hidden md:block text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
+                       
+                       <p class="service-description text-gray-600 text-lg leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 mt-2">
                             Maximise performance and reliability with continuous monitoring, optimisation, and lifecycle management.
                         </p>
                          </div>
@@ -753,12 +604,12 @@ Simple to adopt, built to last, focused on results.
  
            <!-- Content Sections (for scrolling) -->
     <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-[7%] 2xl:px-[7%]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="h-[50vh]"></div>
         </div>
     </section>
     <section class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-[7%] 2xl:px-[7%]">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="h-[50vh]"></div>
         </div>
     </section>

@@ -95,6 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Services section word-by-word animation
     const serviceItems = document.querySelectorAll('.service-item');
     let activeTimeouts = []; // Store active timeouts
+    let currentActiveItem = null; // Track currently active service item
+    let hoverTimeout = null; // Track hover timeout for stability
     
     // Function to clear all active timeouts and reset all titles
     function resetAllTitles() {
@@ -102,14 +104,57 @@ document.addEventListener('DOMContentLoaded', function() {
         activeTimeouts.forEach(timeout => clearTimeout(timeout));
         activeTimeouts = [];
         
-        // Reset all service titles to gray immediately
+        // Reset all service titles to dark blue immediately
         serviceItems.forEach(serviceItem => {
             const title = serviceItem.querySelector('.service-title');
             const words = title.querySelectorAll('.word');
             words.forEach(word => {
-                word.style.color = '#9CA3AF'; // gray-400
+                word.style.color = '#172D44'; // dark blue
+                word.style.transition = 'color 0.2s ease-in-out';
             });
         });
+    }
+    
+    // Function to reset all images to initial state
+    function resetAllImages() {
+        serviceItems.forEach(serviceItem => {
+            const image = serviceItem.querySelector('.service-hover-image');
+            if (image) {
+                // Reset image to initial state
+                image.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                image.style.opacity = '0';
+                image.style.transform = 'scale(0.3) translateY(15px) translateX(10px) rotate(2deg)';
+                image.style.filter = 'blur(2px)';
+                image.style.zIndex = '5';
+            }
+        });
+    }
+    
+    // Function to handle smooth transitions between service cards
+    function handleServiceCardTransition(newActiveItem) {
+        // If there's a currently active item and it's different from the new one
+        if (currentActiveItem && currentActiveItem !== newActiveItem) {
+            // Force close the previous item's image quickly
+            const previousImage = currentActiveItem.querySelector('.service-hover-image');
+            if (previousImage) {
+                previousImage.style.transition = 'all 0.15s cubic-bezier(0.4, 0, 1, 1)';
+                previousImage.style.opacity = '0';
+                previousImage.style.transform = 'scale(0.2) translateY(20px) translateX(15px) rotate(3deg)';
+                previousImage.style.filter = 'blur(3px)';
+                previousImage.style.zIndex = '5';
+            }
+        }
+        
+        // Set the new active item
+        currentActiveItem = newActiveItem;
+        
+        // Reset transition timing for the new item
+        if (newActiveItem) {
+            const newImage = newActiveItem.querySelector('.service-hover-image');
+            if (newImage) {
+                newImage.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            }
+        }
     }
     
     serviceItems.forEach(item => {
@@ -122,23 +167,59 @@ document.addEventListener('DOMContentLoaded', function() {
             word.style.transition = 'color 0.1s ease'; // Faster transition for instant reset
         });
         
-        // Add hover event listeners
+        // Add hover event listeners with stability
         item.addEventListener('mouseenter', () => {
+            // Clear any existing hover timeout
+            if (hoverTimeout) {
+                clearTimeout(hoverTimeout);
+                hoverTimeout = null;
+            }
+            
+            // Handle smooth transition between cards
+            handleServiceCardTransition(item);
+            
             // First, reset all titles and clear timeouts
             resetAllTitles();
             
-            // Then animate current title words to orange one by one
+            // Reset all images first, then animate current one
+            resetAllImages();
+            
+            // Small delay to ensure image animation works when returning to a card
+            setTimeout(() => {
+                const currentImage = item.querySelector('.service-hover-image');
+                if (currentImage) {
+                    currentImage.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    currentImage.style.opacity = '1';
+                    currentImage.style.transform = 'scale(1) translateY(0) translateX(0) rotate(0deg)';
+                    currentImage.style.filter = 'blur(0px)';
+                    currentImage.style.zIndex = '10';
+                }
+            }, 50);
+            
+            // Animate all words to orange color simultaneously for smoother effect
             words.forEach((word, index) => {
                 const timeout = setTimeout(() => {
                     word.style.color = '#E04D2B'; // orange color
-                }, index * 100); // Reduced delay for faster animation
+                    word.style.transition = 'color 0.3s ease-in-out';
+                }, index * 50); // Faster animation with shorter delay
                 activeTimeouts.push(timeout);
             });
         });
         
         item.addEventListener('mouseleave', () => {
-            // Clear timeouts and reset colors immediately
-            resetAllTitles();
+            // Add small delay to prevent rapid toggling on border
+            hoverTimeout = setTimeout(() => {
+                // Clear timeouts and reset colors
+                resetAllTitles();
+                
+                // Reset all images to initial state
+                resetAllImages();
+                
+                // Clear the current active item when leaving
+                if (currentActiveItem === item) {
+                    currentActiveItem = null;
+                }
+            }, 100); // 100ms delay to prevent rapid toggling
         });
     });
 });

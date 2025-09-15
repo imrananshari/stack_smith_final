@@ -5,6 +5,141 @@ html, body {
     font-style: normal;
 }
 
+/* Navbar edge positioning for all screen sizes */
+#navbar .container {
+    padding-left: 0.7rem !important;
+    padding-right: 0.7rem !important;
+  
+}
+
+/* Enhanced CTA Button Styling - Compact like image */
+#navbar button {
+    min-width: 120px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    /* box-shadow: 0 2px 4px rgba(224, 77, 43, 0.2); */
+    transition: all 0.3s ease;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+#navbar button:hover {
+    transform: translateY(-1px);
+   
+   
+}
+
+/* Responsive CTA Button Sizing - More balanced */
+@media (min-width: 768px) {
+    #navbar button {
+        min-width: 130px;
+        height: 42px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #navbar button {
+        min-width: 140px;
+        height: 44px;
+    }
+}
+
+/* Make logo very close to left edge */
+#navbar .flex.items-center:first-child {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* Make CTA button very close to right edge */
+#navbar .flex.items-center:last-child {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+/* Ensure navbar content uses full width */
+#navbar .flex.items-center.justify-between {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+/* Laptop screen navbar spacing fix - 13-16 inch screens */
+@media (min-width: 768px) and (max-width: 1279px) {
+    #navbar .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Force logo to absolute left edge */
+    #navbar .flex.items-center:first-child {
+        flex-shrink: 0;
+        order: 1;
+        margin-left: 0;
+        padding-left: 0;
+        position: relative;
+        left: 0;
+    }
+    
+    /* Force CTA button to absolute right edge */
+    #navbar .flex.items-center:last-child {
+        flex-shrink: 0;
+        order: 3;
+        margin-right: 0;
+        padding-right: 0;
+        position: relative;
+        right: 0;
+    }
+    
+    /* Navigation in center */
+    #navbar nav {
+        order: 2;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Override any default spacing */
+    #navbar .flex.items-center.justify-between {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Large desktop screen alignment - ensure navbar and sections have equal margins */
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    /* Ensure consistent padding on large screens */
+    .container {
+        padding-left: 7% !important;
+        padding-right: 7% !important;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    /* Ensure consistent padding on extra large screens */
+    .container {
+        padding-left: 7% !important;
+        padding-right: 7% !important;
+    }
+}
+
 /* Set different weights for different elements */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700; /* Bold for headings */
@@ -114,58 +249,172 @@ p {
     transition: color 1.5s ease !important;
 }
 
-/* Service hover image animations */
+/* Service hover image animations - Faster opening animation */
 .service-item .service-hover-image {
     opacity: 0;
-    transform: scale(0.8) translateY(10px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.3) translateY(15px) translateX(10px) rotate(2deg);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     pointer-events: none;
     right: 120px;
+    filter: blur(2px);
+    transition-delay: 0s;
+    z-index: 5;
 }
 
 .service-item:hover .service-hover-image {
     opacity: 1;
-    transform: scale(1) translateY(0);
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1) translateY(0) translateX(0) rotate(0deg);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: blur(0px);
+    transition-delay: 0s;
+    z-index: 10;
 }
 
-/* Quick fade out when leaving hover */
-.service-item .service-hover-image {
+/* Smooth scaling animation for image container - faster speed */
+.service-item .service-hover-image > div {
+    transform: scale(0.3) translateY(8px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition-delay: 0s;
 }
 
-.service-item:hover .service-hover-image {
-    transition-delay: 0.1s;
+.service-item:hover .service-hover-image > div {
+    transform: scale(1) translateY(0);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: 0s;
 }
 
-/* Service card background on hover */
+/* Smooth image scaling effect - faster opening */
+.service-item .service-hover-image img {
+    transform: scale(0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: 0s;
+}
+
+.service-item:hover .service-hover-image img {
+    transform: scale(1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: 0s;
+}
+
+/* Service card background on hover - Enhanced with smooth transitions */
+.service-item {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-property: background-color, padding, border-radius, margin, border-bottom;
+    position: relative;
+}
+
+
 .service-item .flex.flex-col {
-    transition: background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease, height 0.3s ease-in-out, margin-bottom 0.3s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, padding, height, margin;
+    height: 14rem; /* Set consistent default height */
+}
+
+/* Default state - borders handled by HTML classes */
+
+/* Desktop hover styles - more specific to override mobile */
+@media (min-width: 768px) {
+    .service-item:hover {
+        background-color: #eeeff6;
+        border-radius: 0.5rem;
+        margin: 0.5rem 0;
+        padding: 1.5rem;
+        border-bottom: none !important;
+        /* Add stability to prevent rapid toggling */
+        transition-delay: 0.1s;
+    }
+    
+    /* Ensure all service items remove border on hover */
+    .service-item:hover {
+        border-bottom: none !important;
+    }
 }
 
 .service-item:hover .flex.flex-col {
-background-color: #eeeff6;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    height: 10rem;
-    margin-top: 0.5rem;
+    background-color: transparent;
+    padding: 0;
+    height: 10rem !important;
+    margin: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Add stability to prevent rapid toggling */
+    transition-delay: 0.05s;
+    /* box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); */
 }
 
-/* Increase height for cards with multi-line titles */
-.service-item:has(h3 br):hover .flex.flex-col {
-    height: 12rem;
-    margin-bottom: 0.5rem;
+/* Enhanced hover image shadow animation - no white border */
+.service-item .service-hover-image > div {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-delay: 0s;
+    border: none;
+    background: transparent;
 }
+
+.service-item:hover .service-hover-image > div {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transition-delay: 0.3s;
+    border: none;
+    background: transparent;
+}
+
+/* All cards now have consistent height - removed multi-line title special case */
+
+/* Fast exit animation when leaving hover - smooth and quick */
+.service-item:not(:hover) .service-hover-image {
+    opacity: 0;
+    transform: scale(0.3) translateY(15px) translateX(10px) rotate(2deg);
+    transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+    filter: blur(2px);
+}
+
+.service-item:not(:hover) .service-hover-image > div {
+    transform: scale(0.3) translateY(8px);
+    transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.service-item:not(:hover) .service-hover-image img {
+    transform: scale(0.3);
+    transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* Ensure smooth transition back to original state */
+.service-item .service-hover-image {
+    will-change: opacity, transform, filter;
+}
+
+/* Prevent any visual glitches during transitions */
+.service-item {
+    position: relative;
+    overflow: visible;
+}
+
+/* Ensure only one image is visible at a time */
+.service-item:not(:hover) .service-hover-image {
+    pointer-events: none;
+    z-index: 1;
+}
+
+.service-item:hover .service-hover-image {
+    pointer-events: none;
+    z-index: 20;
+}
+
+/* Smooth continuous scaling - no keyframes, just smooth transitions */
 
 /* Delayed orange color animation for h3 titles */
 .service-item .service-title {
-    transition: color 0.9s ease-in-out;
-    transition-delay: 1s;
+    color: #172D44;
+    transition: color 0.3s ease-in-out;
+    transition-delay: 0s;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .service-item:hover .service-title {
     color: #E04D2B;
-    transition-delay: 1.5s;
+    transition: color 0.3s ease-in-out;
+    transition-delay: 0s;
 }
 
 /* Services dropdown styling */
@@ -298,6 +547,193 @@ background-color: #eeeff6;
         margin-right: 0 !important;
         margin-top: 0 !important;
         border-radius: 0 !important;
+    }
+    
+    /* Mobile navbar spacing fixes */
+    #navbar .container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+    
+    #navbar .flex.items-center.justify-between {
+        gap: 0.25rem;
+    }
+    
+    /* Mobile logo text - keep on single line */
+    #navbar .flex.items-center:first-child span {
+        font-size: 1.125rem; /* text-lg */
+        line-height: 1.2;
+    }
+    
+    /* Mobile CTA button - prevent text wrapping */
+    #navbar button {
+        min-width: 110px;
+        height: 36px;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        font-size: 0.75rem; /* text-xs */
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.25rem;
+        flex-shrink: 0;
+    }
+    
+    /* Mobile CTA button text - smaller to fit */
+    #navbar button span {
+        font-size: 0.75rem;
+        line-height: 1;
+    }
+    
+    /* Mobile hamburger menu - remove card background */
+    #navbar .md\\:hidden button {
+        padding: 0.25rem;
+        background: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+    }
+    
+    #navbar .md\\:hidden {
+        background: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+    }
+    
+    /* Mobile-specific service card layout - horizontal design */
+    .service-item {
+        height: 80px;
+        padding: 1rem 0;
+        border-bottom: 1px solid #e5e7eb;
+        transition: all 0.3s ease;
+    }
+    
+    .service-item:hover {
+        height: 200px;
+        background-color: #f8fafc;
+        border-radius: 8px;
+        margin: 0.5rem 0;
+        padding: 1rem;
+        border-bottom: none !important;
+        /* Add stability to prevent rapid toggling */
+        transition-delay: 0.1s;
+    }
+    
+    /* Mobile card content layout - 2 row structure */
+    .service-item .flex.flex-col {
+        height: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .service-item:hover .flex.flex-col {
+        flex-direction: column;
+        align-items: stretch;
+        height: 100%;
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    /* Mobile first row: H3 title + Arrow button */
+    .service-item .mobile-title-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Mobile h3 text styling - smaller */
+    .service-item .service-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #172D44;
+        text-align: left;
+        line-height: 1.2;
+        flex: 1;
+        margin: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .service-item:hover .service-title {
+        font-size: 1.1rem;
+        color: #E04D2B;
+    }
+    
+/* Mobile arrow icon */
+.service-item .arrow-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+/* Arrow rotation animation - 2 o'clock direction (60 degrees) */
+.service-item .arrow-icon svg {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+}
+
+.service-item:hover .arrow-icon svg {
+    transform: rotate(60deg) translateX(2px);
+}
+
+/* Desktop arrow animation - same rotation for consistency */
+@media (min-width: 768px) {
+    .service-item .arrow-icon svg {
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transform-origin: center;
+    }
+    
+    .service-item:hover .arrow-icon svg {
+        transform: rotate(60deg) translateX(2px);
+    }
+}
+    
+    /* Mobile second row: Description + Image */
+    .service-item .mobile-content-row {
+        display: none;
+        width: 100%;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .service-item:hover .mobile-content-row {
+        display: flex;
+    }
+    
+    /* Mobile description */
+    .service-item .mobile-description {
+        flex: 1;
+        font-size: 0.875rem;
+        color: #6b7280;
+        line-height: 1.5;
+    }
+    
+    /* Mobile compact image */
+    .service-item .mobile-image {
+        width: 80px;
+        height: 60px;
+        border-radius: 6px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    
+    .service-item .mobile-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    /* Hide desktop hover image on mobile */
+    .service-item .service-hover-image {
+        display: none;
     }
 }
 
